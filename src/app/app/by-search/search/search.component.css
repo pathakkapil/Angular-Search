@@ -1,0 +1,29 @@
+.card-width {
+    width: 84rem;
+    margin-top: 13px;
+
+    margin-left: 10px;
+    margin-right: 10px
+}
+.title-font-bold{
+    font-weight: bold;
+}
+.input-search-bar{
+    text-align: center;
+margin: 16px;
+border: 1px solid black;
+border-radius: 52px;
+/* width: 50%; */
+padding: 10px;
+}
+.input-box{
+    padding: 8px;
+width: 50%;
+}
+
+.text-center{
+text-align: center;
+}
+.margin-btn{
+    margin: 5px;
+}

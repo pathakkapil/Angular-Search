@@ -1,0 +1,41 @@
+<section class="content">
+  <div class="col-sm-12">
+    <div class="input-search-bar" style="text-align: center;">
+      <input placeholder="Type to search records..." type="text" class="input-box" aria-label="Search box"
+        [(ngModel)]="searchText" name="searchText" />
+      <button type="button" (click)="byTitle()" class="btn btn-primary margin-btn">Search</button>
+      <button type="button" (click)="reset()" class="btn btn-dark">Reset</button>
+    </div>
+    <div class="card card-width" *ngFor="let item of rows">
+      <div class="card-body">
+        <form>
+          <div class="form-group row">
+            <label for="staticEmail" class="col-sm-2 col-form-label title-font-bold">Title</label>
+            <div class="col-sm-10">
+              {{item.Title}}
+            </div>
+            <label for="staticEmail" class="col-sm-2 col-form-label title-font-bold">Year</label>
+            <div class="col-sm-10">
+              {{item.Year}}
+            </div>
+            <label for="staticEmail" class="col-sm-2 col-form-label title-font-bold">imdbID</label>
+            <div class="col-sm-10">
+              {{item.imdbID}}
+            </div>
+            <label for="staticEmail" class="col-sm-2 col-form-label title-font-bold">Type</label>
+            <div class="col-sm-10">
+              {{item.Type}}
+            </div>
+            <label for="staticEmail" class="col-sm-2 col-form-label title-font-bold">Poster</label>
+            <div class="col-sm-10">
+              <a href="{{item.Poster}}" target="_blank" rel="noopener noreferrer">{{item.Poster}}</a>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <p class="text-center" *ngIf="this.rows.length==0">
+      {{ errorMessageLabel}}
+    </p>
+  </div>
+</section>
