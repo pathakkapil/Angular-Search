@@ -1,10 +1,11 @@
+
 <section class="content">
   <div class="col-sm-12">
     <div class="input-search-bar" style="text-align: center;">
       <input placeholder="Type to search records..." type="text" class="input-box" aria-label="Search box"
         [(ngModel)]="searchText" name="searchText" />
       <button type="button" (click)="byTitle()" class="btn btn-primary margin-btn">Search</button>
-      <button type="button" (click)="reset()" class="btn btn-dark">Reset</button>
+      <button type="button" (click)="reSet()" class="btn btn-dark">Reset</button>
     </div>
     <div class="card card-width" *ngFor="let item of rows">
       <div class="card-body">

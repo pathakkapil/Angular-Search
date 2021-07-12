@@ -18,7 +18,6 @@ export class SearchComponent implements OnInit {
   ngOnInit(): void {
   }
   byTitle() {
-    debugger;
     var Value = this.searchText == undefined ? '' : this.searchText;
     this.Search.byTitle(Value).subscribe(
       data => {
@@ -32,7 +31,7 @@ export class SearchComponent implements OnInit {
       }, error => {
       });
   }
-  reset() {
+  reSet() {
     this.searchText = "";
     this.rows = [];
     this.errorMessageLabel="";
